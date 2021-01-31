@@ -11,38 +11,76 @@ function MyShopCar() {
     }
 }
 //se creo objeto carrito
-var myFirstShop = new MyShopCar();
+var cart = new MyShopCar();
 
 
 //SE CREA FUNCION CONSTRUCTORA CON OBJETOS
 
-function MyProduct (tipo, marca, precio, cantidad){
+function MyProduct (tipo, marca, precio, img){
     this.tipo=tipo;
     this.marca=marca;
     this.precio=precio;
+    this.img=img;
+
+}
+
+
+//se crearon objetos un objeto producto
+var zero = new MyProduct("Board","Baker",10000,"/Images/baker.jpg");
+var shortys = new MyProduct("Board","Shortys",15000,"/Images/shortys.jpg");
+var independent = new MyProduct("Trucks","Independent",15000,"/Images/independenttruck.jpg");
+
+var boardArr=[zero,shortys,independent]
+
+function Compra (producto,cantidad,descuento){
+    this.producto=producto;
     this.cantidad=cantidad;
+    this.descuento=descuento
+
+    this.getPrecioConDescuento= function(){
+        return this.producto.precio*this.descuento
+    }
 }
 
-//se creo un objeto producto
-var myFirstItem = new MyProduct("Board","Zero",10000, 2);
-var mySecondtItem = new MyProduct("Board","Shortys",15000, 1);
-var myThirdtItem = new MyProduct("Trucks","Independent",15000, 1);
 
 
-myFirstShop.addItem(myFirstItem);
 
 
-myFirstShop.addItem(mySecondtItem);
-myFirstShop.addItem(myThirdtItem);
+cart.addItem(new Compra (shortys,3));
 
+
+
+console.log(cart);
 
 
 
 
 
-console.log(myFirstShop.compra);
+console.log(cart.compra);
 
-for( let i=0; i< myFirstShop.compra.length ; i++){
-    console.log(myFirstShop.compra[i]);
+for( let i=0; i< cart.compra.length ; i++){
+    console.log(cart.compra[i]);
 
 }
+
+// INSERTARDO ELEMENTO AL HTML en tablas
+
+let tablas= document.getElementById('tablas');
+
+for( let board of boardArr){
+
+    let li =document.createElement('li');
+    let img = document.createElement('img');
+    img.src = board.img;
+    li.appendChild(img);
+    tablas.appendChild(li);
+
+
+}
+
+console.log(tablas)
+
+
+
+
+

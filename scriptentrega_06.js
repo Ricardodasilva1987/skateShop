@@ -86,6 +86,9 @@ function Board(marca, medida, precio,image) {
             return`Gracias por su compra`;
         }
     }
+    this.yeahSkate= function (){
+        return `YEAAHHH tienes una  ${marca}`;
+    }
 
 }
 
@@ -106,7 +109,7 @@ let boards2 = [
 //SE UTILIZO EL METODO CONCAT
 let boards= boards1.concat(boards2);
 
- console.log(boards);
+//  console.log(boards);
 //REALICE UNA FUNCION PARA LLAMAR  A UN CIcLO FOR OF PARA RECORRER ARREGLOS
 //Y ME MUESTRE EN CONSOLA  LAS TABLAS Y UNOS METODOS DE LA FUNCION CONSTRUCTORA
 
@@ -114,10 +117,28 @@ function compraSkate (){
 
  for (let board of boards) {
     console.log(board);
-    console.log(board.getBoard());
-    console.log(board.getOfferBoard());
+    // console.log(board.getBoard());
+    // console.log(board.getOfferBoard());
  }
 
 }
 
-compraSkate();
+//compraSkate();
+
+
+ function randomSkate(){
+     
+     var random = Math.floor(Math.random()*boards.length);
+     
+     return boards[random];
+
+ }
+
+ console.log(randomSkate().yeahSkate());
+ randomSkate().yeahSkate();
+ randomSkate().yeahSkate();
+ randomSkate().yeahSkate();
+ 
+ 
+
+
