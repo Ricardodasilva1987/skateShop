@@ -65,20 +65,25 @@ for( let i=0; i< cart.compra.length ; i++){
 
 // INSERTARDO ELEMENTO AL HTML en tablas
 
-let tablas= document.getElementById('tablas');
+// let tablas= document.getElementById('tablas');
 
-for( let board of boardArr){
+// for( let board of boardArr){
 
-    let li =document.createElement('li');
-    let img = document.createElement('img');
-    img.src = board.img;
-    li.appendChild(img);
-    tablas.appendChild(li);
+//     let li =document.createElement('li');
+//     let img = document.createElement('img');
+//     img.src = board.img;
+//     li.appendChild(img);
+//     tablas.appendChild(li);
 
 
-}
+// }
 
-console.log(tablas)
+
+
+
+//CAMBIANDO LOS PRECIOS DE LAS IMAGANES EN EL DOM
+
+
 
 
 
