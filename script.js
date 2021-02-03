@@ -83,7 +83,9 @@ for( let i=0; i< cart.compra.length ; i++){
 
 //CAMBIANDO LOS PRECIOS DE LAS IMAGANES EN EL DOM
 
-
+document.getElementById("titulo-tablas").innerHTML = "Tablas";
+document.getElementById("baker").innerHTML = "Nuestras Tablas";
+document.getElementById("titulo-tablas").innerHTML = "Nuestras Tablas";
 
 
 
