@@ -26,11 +26,13 @@ function MyProduct (tipo, marca, precio, img){
 
 
 //se crearon objetos un objeto producto
-var zero = new MyProduct("Board","Baker",10000,"/Images/baker.jpg");
+var baker = new MyProduct("Board","Baker",10000,"/Images/baker.jpg");
 var shortys = new MyProduct("Board","Shortys",15000,"/Images/shortys.jpg");
 var independent = new MyProduct("Trucks","Independent",15000,"/Images/independenttruck.jpg");
+var blind = new MyProduct("Board","Blind",5000,"/Images/blindskate.jpg");
+var destructo = new MyProduct("Trucks","destructo",25000,"/Images/destructotrucks.jpg");
 
-var boardArr=[zero,shortys,independent]
+let boardArr =[baker,shortys,independent,blind,destructo];
 
 function Compra (producto,cantidad,descuento){
     this.producto=producto;
@@ -80,14 +82,23 @@ for( let i=0; i< cart.compra.length ; i++){
 
 
 
-
 //CAMBIANDO LOS PRECIOS DE LAS IMAGANES EN EL DOM
+let productosBoards = document.getElementById("boards");
 
-document.getElementById("titulo-tablas").innerHTML = "Tablas";
-document.getElementById("baker").innerHTML = "Nuestras Tablas";
-document.getElementById("titulo-tablas").innerHTML = "Nuestras Tablas";
+function mostrarProducto (boardArr){
+    productosBoards.innerHTML='';
+    boardArr.forEach(element => {
+        const cart=contructorDeCartas(element);
+        productosBoards.innerHTML +=cart;
+        
+    });
+}
 
-
-
-
-
+function contructorDeCartas(element){
+    let div =`<div class="card"  style="width: 18rem; height: 25rem;">
+    <img src="${element.img}" class="card-img-top" alt="..." style="height: 18rem;">
+    <div class="card-body" >
+      <p class="card-text" id ="baker">${element.marca}</p>
+    </div> `
+    return div;
+}
