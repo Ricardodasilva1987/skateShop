@@ -87,11 +87,11 @@ let productosBoards = document.getElementById("boards");
 
 function mostrarProducto (boardArr){
     productosBoards.innerHTML='';
-    boardArr.forEach(element => {
+    boardArr.forEach(function(element){
+        
         const cart=contructorDeCartas(element);
         productosBoards.innerHTML += cart;
-        
-    });
+    };
 }
 
 function contructorDeCartas(element){
