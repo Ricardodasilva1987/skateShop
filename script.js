@@ -89,7 +89,7 @@ function mostrarProducto (boardArr){
     productosBoards.innerHTML='';
     boardArr.forEach(element => {
         const cart=contructorDeCartas(element);
-        productosBoards.innerHTML +=cart;
+        productosBoards.innerHTML += cart;
         
     });
 }
