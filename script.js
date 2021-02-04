@@ -80,10 +80,15 @@ for( let i=0; i< cart.compra.length ; i++){
 
 // }
 
-
+let div =`<div class="card"  style="width: 18rem; height: 25rem;">
+    <img src="${element.img}" class="card-img-top" alt="..." style="height: 18rem;">
+    <div class="card-body" >
+      <p class="card-text" id ="baker">${element.marca}</p>
+    </div>`
 
 //CAMBIANDO LOS PRECIOS DE LAS IMAGANES EN EL DOM
 let productosBoards = document.getElementById("boards");
+productosBoards.innerHTML=div;
 
 function mostrarProducto (boardArr){
     productosBoards.innerHTML='';
@@ -91,14 +96,15 @@ function mostrarProducto (boardArr){
         
         const cart=contructorDeCartas(element);
         productosBoards.innerHTML += cart;
-    };
+    })
 }
 
-function contructorDeCartas(element){
+function contructorDeCartas(element) {
     let div =`<div class="card"  style="width: 18rem; height: 25rem;">
     <img src="${element.img}" class="card-img-top" alt="..." style="height: 18rem;">
     <div class="card-body" >
       <p class="card-text" id ="baker">${element.marca}</p>
-    </div> `
+    </div>`
+    
     return div;
 }
