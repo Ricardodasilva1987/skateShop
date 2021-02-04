@@ -85,8 +85,8 @@ for( let i=0; i< cart.compra.length ; i++){
 //CAMBIANDO LOS PRECIOS DE LAS IMAGANES EN EL DOM
 
 
-let cambiando = document.getElementById('titulo-tablas');
-cambiando.innerHTML='helo';
+// let cambiando = document.getElementById('titulo-tablas');
+// cambiando.innerHTML='helo';
 
 
 
