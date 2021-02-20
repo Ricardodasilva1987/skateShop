@@ -109,13 +109,14 @@ function Compra(producto, cantidad) {
 }
 
 //SE CREA FUNCION CONSTRUCTORA del producto
+// Ya no es necesaria, porque se genero un JSON con los objetos
 
-function MyProduct(id, tipo, marca, precio, img) {
-    this.id = id;
-    this.tipo = tipo;
-    this.marca = marca;
-    this.precio = precio;
-    this.img = img;
+// function MyProduct(id, tipo, marca, precio, img) {
+//     this.id = id;
+//     this.tipo = tipo;
+//     this.marca = marca;
+//     this.precio = precio;
+//     this.img = img;
 
 
-}
+// }
