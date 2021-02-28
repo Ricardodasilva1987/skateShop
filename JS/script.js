@@ -53,6 +53,7 @@ function MyShopCar() {
             this.compras.pop();
         }
         sessionStorage.clear();
+        $("#comprafooter").html(`<p> Esperamos que te unas al Skate!</p> `);
     }
 
     this.comprar = function (id, cantidad = 1) {
@@ -67,19 +68,7 @@ function MyShopCar() {
         if (!found) {
             const product = buscarProducto(id);
 
-            //   const product = allProducts.find(function (p) {
-            //    if(p.id==id){
-            //        return true;
-            //    }
-            //    else {
-            //        return false;
-            //    }
-
-
-
-            // return (p.id == id);
-            //  });
-            // console.log(product);
+   
             cart.addItem(new Compra(product, 1));
             cart.totalShop();
             cart.totalQuantity();

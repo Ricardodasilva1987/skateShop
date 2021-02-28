@@ -1,112 +1,125 @@
-*{
+* {
     margin: 0%;
     padding: 0%;
-    box-sizing: border-box; 
-    
-    
+    box-sizing: border-box;
+
+
 }
+
 body {
     background-image: url(/Images/backgroundimage.jpg);
     padding-top: 135px;
 }
 
-h1{
+h1 {
     font-family: 'Shadows Into Light', cursive;
     color: white;
     display: flex;
     justify-content: center;
-    
+
 }
-p{
+
+p {
     font-family: 'Shadows Into Light', cursive;
     color: white;
     line-height: 30px;
-    
+
 }
 
 ul li {
     font-family: 'Shadows Into Light', cursive;
     color: white;
 }
-.navbar-nav a{
-    
+
+.navbar-nav a {
+
     padding-right: 40px;
     margin: 0 20px 0 20px;
     font-size: 25px;
     font-family: 'Shadows Into Light', cursive;
-    color: white;
+
 }
 
-.compra{
+.navbar-light .navbar-nav .nav-link {
+    color: white !important;
+}
+
+.compra {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
-  .redes{
+
+.redes {
     display: flex;
     text-align: center;
     justify-content: center;
-  } 
- .redes img {
+}
+
+.redes img {
     margin: 20px;
-     background-color: #efb810;
-     width: 30px;
-     
- }
+    background-color: #efb810;
+    width: 30px;
 
- .row{
-     display: flex;
-     justify-content: space-around;
- }
+}
 
- .table tr {
-     color: white;
- }
+.row {
+    display: flex;
+    justify-content: space-around;
+}
 
- .boton{
-     display: flex;
-     justify-content: space-between;
- }
+.table tr {
+    color: white;
+}
 
- .modal-body p {
-     color: black;
- }
+.boton {
+    display: flex;
+    justify-content: space-between;
+}
 
- h3{
+.modal-body p {
+    color: black;
+}
+
+h3 {
     font-family: 'Shadows Into Light', cursive;
     color: black;
-    font-size:larger;
+    font-size: larger;
 
- }
+}
 
-.user  {
-     display: flex;
-     justify-content: flex-end;
- }
+.user {
+    display: flex;
+    justify-content: flex-end;
+}
 
- .cart-fix{
-     position: fixed;
-     right: 5px;
-     top: 1px;
- }
+.cart-fix {
+    position: fixed;
+    right: 5px;
+    top: 1px;
+}
 
- #carrito{
-     position: fixed;
-     right: 0;
-     top:85px;
-     display: none; 
-     width: 30%;
-     background-color: white;
-    
+#carrito {
+    position: fixed;
+    right: 0;
+    top: 85px;
+    display: none;
+    width: 30%;
+    background-color: white;
 
 
- }
 
- #carrito table tr{
-     color: black;
+}
 
- }
+#carrito table tr {
+    color: black;
 
- .modal-backdrop{
-     display: none;   
- }
+}
+
+.modal-backdrop {
+    display: none;
+}
+
+.factura{
+    font-size: 20px;
+}

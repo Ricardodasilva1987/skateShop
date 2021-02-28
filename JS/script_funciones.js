@@ -10,7 +10,6 @@ let allProducts = []; //.concat(boardArr, truckArr, wheelsArr);
 
  
  let carritoList = document.getElementById('productos-cart');
-//  let titulo = document.getElementById('titulo-tablas');
  let totalShopFooter = document.getElementById('total-shop');
  let borrarCompra = document.getElementById('erase');
  let adquirirCompra = document.getElementById('shop')
@@ -73,9 +72,11 @@ function buscarProducto(id) {
 
 
 
+
 function actualizarTablaCompra() {
     let html = '';
     let html2 = '';
+    let html3 = '';
     for (let compra of cart.compras) {
         // console.log(compra.producto.precio)
         // console.log(compra.producto.marca)
@@ -96,14 +97,34 @@ function actualizarTablaCompra() {
       </tr>`
 
     }
+
+        html3= `${cart.totalQuantity()} Items`
     //Definiendo donde entraran las filas creadas en actualizarTablaCompra
+
     // carritoList.innerHTML = html;
     $("#productos-cart").html(html);
+    //No pude ingresar este a traves de JQUERY
+      // $("#total-shop").html(html2);
      totalShopFooter.innerHTML = html2;
-    // $("#total-shop").html(html2);
+  
+    $("#cart-btn-number").html(html3);
   
 
 }
+
+function shopFooter(){
+    let aleatorio = Math.round(Math.random()*999999);
+    let aleatorio2 = Math.round(Math.random()*999);
+    if (cart.totalShop() > 0) {
+        $("#comprafooter").html(`<p class=" factura"> Gracias por su compra, el numero de factura por la transacion es ${aleatorio} y su numero de seguimiento es ${aleatorio2}</p> `);
+       
+
+    } else {
+        $("#comprafooter").html(`<p> Esperamos que te unas al Skate!</p> `);
+        
+    }
+}
+
 
 function eraseTabla() {
     cart.eraseCartShop();
@@ -128,8 +149,11 @@ function mostrarCompra() {
         titulomodal.innerHTML = ` <h3 class="modal-title" id="exampleModalLabel">Tienes el carrito vacio</h3> `
     }
 
+    shopFooter();
 
 }
+
+
 
 function ingresoDeUsuario() {
     cart.inicializarCart();

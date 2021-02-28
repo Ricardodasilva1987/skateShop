@@ -20,7 +20,7 @@
 
   <!-- Header -->
   <header class="container-fluid ">
-    <nav class="navbar navbar-expand-lg  navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg  navbar-light bg fixed-top navbar">
       <a class="navbar-brand" href="#HOME">
         <h1>Primes Skateboards</h1>
       </a>
@@ -33,7 +33,7 @@
           <a class="nav-link" href="#HOME">Home</a>
           <a class="nav-link" href="#COMPRA">Compra</a>
           <a class="nav-link" href="#CONTACTO">Contacto</a>
-          <a class="nav-link " id="cart-btn" ><img src="/Images/cart.svg" alt="shopping cart" style="width: 30px;"></a>
+          <a class="nav-link " id="cart-btn" ><img src="/Images/cart.svg" alt="shopping cart" style="width: 30px;"><p id="cart-btn-number"></p></a>
         </div>
       </div>
     </nav>
@@ -133,7 +133,11 @@
       <p class="user" id="usuario">Recuperar compra</p>
     </div>
     
-    <h1 id="COMPRA">COMPRAS</h1> 
+    <h1 id="COMPRA">DATOS COMPRA</h1> 
+    <div id="comprafooter">
+      <!-- `<p class=" factura"> Gracias por su compra, el numero de factura por la transacion es ${aleatorio} </p> ` -->
+      <!-- `<p class=" factura"> Gracias por su compra, el numero de factura por la transacion es ${aleatorio} </p> ` -->
+    </div>
     
 <div class="container" id='carrito'>
   <table class="table" >
@@ -190,7 +194,7 @@
     </div>
   </div>
 </div>
-  <button id='erase' type="button" class="btn btn-danger ">Borrar compra</button>
+  <button id='erase' type="button" class="btn btn-primary ">Realizar nueva compra</button>
 </div>
 </div>
   </section>
