@@ -3,9 +3,11 @@
     padding: 0%;
     box-sizing: border-box; 
     
+    
 }
 body {
     background-image: url(/Images/backgroundimage.jpg);
+    padding-top: 135px;
 }
 
 h1{
@@ -13,7 +15,7 @@ h1{
     color: white;
     display: flex;
     justify-content: center;
-    padding-bottom: 50px;
+    
 }
 p{
     font-family: 'Shadows Into Light', cursive;
@@ -27,7 +29,8 @@ ul li {
     color: white;
 }
 .navbar-nav a{
-    padding: 20px;
+    
+    padding-right: 40px;
     margin: 0 20px 0 20px;
     font-size: 25px;
     font-family: 'Shadows Into Light', cursive;
@@ -79,4 +82,31 @@ ul li {
 .user  {
      display: flex;
      justify-content: flex-end;
+ }
+
+ .cart-fix{
+     position: fixed;
+     right: 5px;
+     top: 1px;
+ }
+
+ #carrito{
+     position: fixed;
+     right: 0;
+     top:85px;
+     display: none; 
+     width: 30%;
+     background-color: white;
+    
+
+
+ }
+
+ #carrito table tr{
+     color: black;
+
+ }
+
+ .modal-backdrop{
+     display: none;   
  }
